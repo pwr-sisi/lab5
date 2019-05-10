@@ -19,5 +19,20 @@ W ramach ćwiczenia zapoznasz się z fremeworkiem Express/Node.js napisanym w j�
    ```
    node simplewebserver.js
    ```
-   Sprawdź czy możesz obejrzeć efekt działania serwera pod adresem `http://localhost:3000`. Ponieważ port 3000 jest przekierowany z maszyny wirtualnej do komputera, strona powinna dać się otworzyć zarówno w przeglądarce w komputerze jak i w przeglądarce w maszynie wirtualnej.
+   Sprawdź czy możesz obejrzeć efekt działania serwera pod adresem `http://localhost:3000`. Ponieważ port 3000 jest przekierowany z maszyny wirtualnej do komputera, strona powinna dać się otworzyć zarówno w przeglądarce w komputerze jak i w przeglądarce w maszynie wirtualnej. 
+4. Zakończ działanie serwera naciskając `Ctrl+C`.
+
+## Uruchomienie serwera WWW wykorzystującego moduł Express
+
+1. Zainstaluj moduł `express` wraz z wszystkimi zależnościami:
+   ```
+   npm install express --no-bin-links
+   ```
+   Opcja `--no-bin-links` jest konieczna ze względu na brak obsługi łączy symbolicznych w folderach synchronizowanych między maszyną wirtualną i kompterem gospodarzem. W przypadku uruchamiania aplikacji w innych folderach lub bezpośrednio w komputerze nie jest ona wymagana.
+2. Uruchom serwer wykorzystujący moduł express:
+   ```
+   node expresswebserver.js
+   ```
+   Sprawdź w przeglądarce czy serwer działa.
+3. Porównaj kod obu serwerów.
 
