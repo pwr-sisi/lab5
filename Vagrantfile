@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
     curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
     apt-get update
     apt-get install -y ttf-anonymous-pro nodejs
-    npm install -g express morgan body-parser
+    npm install -g express morgan body-parser nodemon
     cat > /usr/share/lxterminal/lxterminal.conf << EOL
 [general]
 fontname=Anonymous Pro 14
