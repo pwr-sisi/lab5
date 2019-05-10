@@ -1,0 +1,10 @@
+{
+    "name": "static_content_routes",
+    "private":"true",
+    "scripts":{
+        "start":"node app.js"
+    },
+    "dependencies":{
+        "express":"^5.0.0"
+    }
+}
