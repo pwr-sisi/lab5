@@ -10,5 +10,14 @@ W ramach ćwiczenia zapoznasz się z fremeworkiem Express/Node.js napisanym w j�
 
 ## Uruchomienie serwera webowego
 
-1. TODO
+1. Zaloguj się do maszyny Vagrant. Otwórz konsolę LXTerminal i przejdź do folderu /vagrant: `cd /vagrant` 
+2. Uruchom najprostszy program:
+   ```
+   node start.js
+   ```
+3. Uruchom najprostszy serwer WWW:
+   ```
+   node simplewebserver.js
+   ```
+   Sprawdź czy możesz obejrzeć efekt działania serwera pod adresem `http://localhost:3000`. Ponieważ port 3000 jest przekierowany z maszyny wirtualnej do komputera, strona powinna dać się otworzyć zarówno w przeglądarce w komputerze jak i w przeglądarce w maszynie wirtualnej.
 
