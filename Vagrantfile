@@ -58,10 +58,10 @@ Vagrant.configure("2") do |config|
   #   # Customize the amount of memory on the VM:
       vb.cpus = 2
       vb.memory = "1024"
-      vb.customize ["modifyvm", :id, "--vram", "128"]
+      vb.customize ["modifyvm", :id, "--vram", "64"]
       vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
       vb.customize ["modifyvm", :id, "--audio", "none"]
-      vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+      # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
   #
   # View the documentation for the provider you are using for more
@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
     curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
     apt-get update
     apt-get install -y ttf-anonymous-pro nodejs
-    npm install -g express morgan
+    npm install -g express morgan body-parser
     cat > /usr/share/lxterminal/lxterminal.conf << EOL
 [general]
 fontname=Anonymous Pro 14
@@ -98,6 +98,5 @@ autologin-user-timeout = 0
 [SeatDefaults]
 allow-guest = false
 EOL
-    reboot
   SHELL
 end
