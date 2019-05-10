@@ -72,13 +72,10 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
-	  # Wersja 8 ze wzgledu na npm 5.7.1 współpracujący z Vagrantem
-    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
     apt-get update
-	  apt-get install -y ttf-anonymous-pro nodejs
-    # Zmienione ze względu na problemy współpracy npm z virtualboxem (problem z symlinkami) 
-    # W folderze /vagrant używaj: npm install express --no-bin-links
-    npm install -g npm@5.7.1
+    apt-get install -y ttf-anonymous-pro nodejs
+    npm install -g express morgan
     cat > /usr/share/lxterminal/lxterminal.conf << EOL
 [general]
 fontname=Anonymous Pro 14
@@ -101,5 +98,6 @@ autologin-user-timeout = 0
 [SeatDefaults]
 allow-guest = false
 EOL
+    reboot
   SHELL
 end
