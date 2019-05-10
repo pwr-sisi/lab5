@@ -1,10 +1,10 @@
 {
     "name": "static_content",
-    "private":"true",
-    "scripts":{
-        "start":"node app.js"
+    "private": "true",
+    "scripts": {
+        "start": "node app.js"
     },
-    "dependencies":{
-        "express":"^5.0.0"
+    "dependencies": {
+        "express": "^5.0.0"
     }
 }
