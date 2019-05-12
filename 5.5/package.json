@@ -1,13 +1,13 @@
 {
     "name": "Api_5_5",
-    "description":"Web server serving full blown REST API",
-    "private":"true",
-    "scripts":{
-        "start":"node app.js"
+    "description": "Web server serving full blown REST API",
+    "private": "true",
+    "scripts": {
+        "start": "node app.js"
     },
-    "dependencies":{
-        "express":"^4.0.0",
-        "morgan":"^1.0.0",
-        "body-parser":"^1.0.0"
+    "dependencies": {
+        "express": "^4.0.0",
+        "morgan": "^1.0.0",
+        "body-parser": "^1.0.0"
     }
 }
