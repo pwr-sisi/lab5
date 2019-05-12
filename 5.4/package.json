@@ -1,0 +1,12 @@
+{
+    "name": "App_5_4",
+    "description":"Web server with parameters in request",
+    "private":"true",
+    "scripts":{
+        "start":"node app.js"
+    },
+    "dependencies":{
+        "express":"^4.0.0",
+        "morgan":"^1.0.0"
+    }
+}

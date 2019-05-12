@@ -1,0 +1,12 @@
+{
+    "name": "App_5_3",
+    "description":"Web server with middleware moved to submodule",
+    "private":"true",
+    "scripts":{
+        "start":"node app.js"
+    },
+    "dependencies":{
+        "express":"^4.0.0",
+        "morgan":"^1.0.0"
+    }
+}
