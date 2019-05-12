@@ -79,7 +79,7 @@ Przykład różni się od poprzednich tym, że dane które są wysyłane z przeg
 2. Otwórz okno `GIT bash` lub `Bash` i wypróbuj działanie następujących poleceń:
    1.  `curl -v http://localhost:3000/v1/user/3`
    2.  `curl -v -X DELETE http://localhost:3000/v1/user/3`
-   3.  `curl -v -X PUT http://localhost:3000/v1/user/3 -v -H "Content-Type: application/json" -d '{"name","Wojtek"}'` lub (jeśli korzystasz z okna CMD w systemie Windows: `curl -v -X PUT http://localhost:3000/v1/user/3 -v -H "Content-Type: application/json" -d "{""name"",""Wojtek""}"`
+   3.  `curl -v -X PUT http://localhost:3000/v1/user/3 -v -H "Content-Type: application/json" -d '{"name":"Wojtek"}'` lub (jeśli korzystasz z okna CMD w systemie Windows: `curl -v -X PUT http://localhost:3000/v1/user/3 -v -H "Content-Type: application/json" -d "{""name"":""Wojtek""}"`
      
         Opcja `-v` wyświetla nagłówki przesłane do i od serwera, opcja `-X` określa typ zapytania (przy czym domyślnym typem zapytania jest `GET`), opcja `-H` określa format przesyłanych danych, a `-d` opisuje dane wysyłane z zapytaniem.
    4. Zainstaluj w przeglądarce Firefox wtyczkę RESTED. Uruchom ją klikając ikonkę `</>` na pasku przeglądarki. Ustaw następujące opcje:
