@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
       vb.customize ["modifyvm", :id, "--vram", "64"]
       vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
       vb.customize ["modifyvm", :id, "--audio", "none"]
-      # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+      vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
   #
   # View the documentation for the provider you are using for more
@@ -72,10 +72,10 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     apt-get update
     apt-get install -y ttf-anonymous-pro nodejs
-    npm install -g express morgan body-parser nodemon
+    npm install -g express morgan body-parser
     cat > /usr/share/lxterminal/lxterminal.conf << EOL
 [general]
 fontname=Anonymous Pro 14
